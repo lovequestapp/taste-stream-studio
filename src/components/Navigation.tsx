@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Search, Bell, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import tasteLogo from "@/assets/taste-logo.png";
+import { Link } from "react-router-dom";
+import tasteLogo from "@/assets/taste-logo-main.png";
 
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,25 +24,27 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-8">
-            <img src={tasteLogo} alt="TASTE" className="h-8 w-auto" />
+            <Link to="/" className="transition-smooth hover:opacity-80">
+              <img src={tasteLogo} alt="TASTE" className="h-10 w-auto" />
+            </Link>
             
             {/* Navigation Links */}
             <div className="hidden md:flex items-center gap-6">
-              <a href="/" className="text-foreground hover:text-primary transition-fast font-medium">
+              <Link to="/" className="text-foreground hover:text-primary transition-fast font-medium">
                 Home
-              </a>
-              <a href="/series" className="text-muted-foreground hover:text-foreground transition-fast">
+              </Link>
+              <Link to="/series" className="text-muted-foreground hover:text-foreground transition-fast">
                 Series
-              </a>
-              <a href="/movies" className="text-muted-foreground hover:text-foreground transition-fast">
+              </Link>
+              <Link to="/movies" className="text-muted-foreground hover:text-foreground transition-fast">
                 Movies
-              </a>
-              <a href="/originals" className="text-muted-foreground hover:text-foreground transition-fast">
+              </Link>
+              <Link to="/originals" className="text-muted-foreground hover:text-foreground transition-fast">
                 Originals
-              </a>
-              <a href="/my-list" className="text-muted-foreground hover:text-foreground transition-fast">
+              </Link>
+              <Link to="/my-list" className="text-muted-foreground hover:text-foreground transition-fast">
                 My List
-              </a>
+              </Link>
             </div>
           </div>
 
