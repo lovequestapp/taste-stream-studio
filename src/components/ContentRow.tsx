@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Play, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface ContentItem {
   id: string;
@@ -17,6 +18,7 @@ interface ContentRowProps {
 
 export const ContentRow = ({ title, items }: ContentRowProps) => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   return (
     <section className="py-8">
@@ -50,6 +52,7 @@ export const ContentRow = ({ title, items }: ContentRowProps) => {
                 className="flex-shrink-0 w-[280px] group/card cursor-pointer"
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
+                onClick={() => navigate(`/show/${item.id}`)}
               >
                 <div className="relative rounded-lg overflow-hidden shadow-card transition-smooth group-hover/card:scale-105 group-hover/card:shadow-premium">
                   {/* Poster Image */}
@@ -72,11 +75,24 @@ export const ContentRow = ({ title, items }: ContentRowProps) => {
                         )}
                       </div>
                       <div className="flex items-center gap-2">
-                        <Button variant="hero" size="sm" className="gap-1 flex-1">
+                        <Button 
+                          variant="hero" 
+                          size="sm" 
+                          className="gap-1 flex-1"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/show/${item.id}`);
+                          }}
+                        >
                           <Play className="h-3 w-3 fill-current" />
-                          Play
+                          Watch
                         </Button>
-                        <Button variant="glass" size="icon" className="h-8 w-8">
+                        <Button 
+                          variant="glass" 
+                          size="icon" 
+                          className="h-8 w-8"
+                          onClick={(e) => e.stopPropagation()}
+                        >
                           <Plus className="h-4 w-4" />
                         </Button>
                       </div>
