@@ -1,6 +1,7 @@
 import { Play, Plus, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { TMDBImage } from "@/components/TMDBImage";
 import heroBanner from "@/assets/hero-banner.jpg";
 
 export const HeroBanner = () => {
@@ -10,10 +11,13 @@ export const HeroBanner = () => {
     <section className="relative h-[85vh] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroBanner}
-          alt="Featured Content"
+        <TMDBImage
+          tmdbId={89413}
+          tmdbType="tv"
+          fallbackImage={heroBanner}
+          alt="South Side"
           className="w-full h-full object-cover"
+          type="backdrop"
         />
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
