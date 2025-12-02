@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Play, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { TMDBImage } from "@/components/TMDBImage";
 
 interface ContentItem {
   id: string;
@@ -9,6 +10,8 @@ interface ContentItem {
   image: string;
   year?: string;
   rating?: string;
+  tmdbId?: number;
+  tmdbType?: 'movie' | 'tv';
 }
 
 interface ContentRowProps {
@@ -56,10 +59,13 @@ export const ContentRow = ({ title, items }: ContentRowProps) => {
               >
                 <div className="relative rounded-lg overflow-hidden shadow-card transition-smooth group-hover/card:scale-105 group-hover/card:shadow-premium">
                   {/* Poster Image */}
-                  <img
-                    src={item.image}
+                  <TMDBImage
+                    tmdbId={item.tmdbId}
+                    tmdbType={item.tmdbType}
+                    fallbackImage={item.image}
                     alt={item.title}
                     className="w-full aspect-[2/3] object-cover"
+                    type="poster"
                   />
 
                   {/* Hover Overlay */}

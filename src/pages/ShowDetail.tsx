@@ -6,6 +6,7 @@ import { ContentRow } from "@/components/ContentRow";
 import { Footer } from "@/components/Footer";
 import { shows } from "@/data/shows";
 import { useState } from "react";
+import { TMDBImage } from "@/components/TMDBImage";
 
 // Import all poster images
 import southSidePoster from "@/assets/south-side-poster.jpg";
@@ -61,6 +62,8 @@ const ShowDetail = () => {
       image: posterMap[s.id] || southSidePoster,
       year: s.year,
       rating: s.rating,
+      tmdbId: s.tmdbId,
+      tmdbType: s.tmdbType,
     }));
 
   return (
@@ -71,10 +74,13 @@ const ShowDetail = () => {
       <section className="relative h-[90vh] w-full overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
-          <img
-            src={posterImage}
+          <TMDBImage
+            tmdbId={show.tmdbId}
+            tmdbType={show.tmdbType}
+            fallbackImage={posterImage}
             alt={show.title}
             className="w-full h-full object-cover scale-110 blur-sm"
+            type="backdrop"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />

@@ -19,6 +19,8 @@ const Index = () => {
       image: southSidePoster,
       year: "2019",
       rating: "TV-MA",
+      tmdbId: 89413,
+      tmdbType: "tv" as const,
     },
     {
       id: "shermans-showcase",
@@ -26,6 +28,8 @@ const Index = () => {
       image: shermansShowcasePoster,
       year: "2019",
       rating: "TV-14",
+      tmdbId: 90149,
+      tmdbType: "tv" as const,
     },
     {
       id: "the-last-og",
@@ -58,6 +62,8 @@ const Index = () => {
       image: gameNightPoster,
       year: "2018",
       rating: "R",
+      tmdbId: 446809,
+      tmdbType: "movie" as const,
     },
     {
       id: "girls-trip",
@@ -65,6 +71,8 @@ const Index = () => {
       image: girlsTripPoster,
       year: "2017",
       rating: "R",
+      tmdbId: 412019,
+      tmdbType: "movie" as const,
     },
     {
       id: "bridesmaids",
@@ -72,6 +80,8 @@ const Index = () => {
       image: bridesmaids,
       year: "2011",
       rating: "R",
+      tmdbId: 55721,
+      tmdbType: "movie" as const,
     },
     {
       id: "shermans-showcase",
@@ -79,6 +89,8 @@ const Index = () => {
       image: shermansShowcasePoster,
       year: "2019",
       rating: "TV-14",
+      tmdbId: 90149,
+      tmdbType: "tv" as const,
     },
     {
       id: "snatched",
@@ -96,6 +108,8 @@ const Index = () => {
       image: actionComedyPoster,
       year: "2022",
       rating: "PG-13",
+      tmdbId: 361743,
+      tmdbType: "movie" as const,
     },
     {
       id: "south-side",
@@ -103,6 +117,8 @@ const Index = () => {
       image: southSidePoster,
       year: "2019",
       rating: "TV-MA",
+      tmdbId: 89413,
+      tmdbType: "tv" as const,
     },
     {
       id: "game-night",
@@ -110,6 +126,8 @@ const Index = () => {
       image: gameNightPoster,
       year: "2018",
       rating: "R",
+      tmdbId: 446809,
+      tmdbType: "movie" as const,
     },
     {
       id: "glow",
@@ -124,6 +142,8 @@ const Index = () => {
       image: bridesmaids,
       year: "2011",
       rating: "R",
+      tmdbId: 55721,
+      tmdbType: "movie" as const,
     },
   ];
 
