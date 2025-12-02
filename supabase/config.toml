@@ -1,1 +1,4 @@
 project_id = "nlyiwzragpifznbpgifi"
+
+[functions.fetch-tmdb-data]
+verify_jwt = false

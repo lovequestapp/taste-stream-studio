@@ -13,6 +13,8 @@ export interface Show {
   episodes?: number;
   runtime?: string;
   trailerUrl?: string;
+  tmdbId?: number;
+  tmdbType?: 'movie' | 'tv';
 }
 
 export const shows: Record<string, Show> = {
@@ -29,7 +31,9 @@ export const shows: Record<string, Show> = {
     seasons: 2,
     episodes: 20,
     runtime: "22 min",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    tmdbId: 89413,
+    tmdbType: "tv"
   },
   "shermans-showcase": {
     id: "shermans-showcase",
@@ -44,7 +48,9 @@ export const shows: Record<string, Show> = {
     seasons: 2,
     episodes: 16,
     runtime: "21 min",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    tmdbId: 90149,
+    tmdbType: "tv"
   },
   "glow": {
     id: "glow",
@@ -100,7 +106,9 @@ export const shows: Record<string, Show> = {
     creator: "John Francis Daley, Jonathan Goldstein",
     cast: ["Jason Bateman", "Rachel McAdams", "Kyle Chandler", "Sharon Horgan"],
     runtime: "100 min",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    tmdbId: 446809,
+    tmdbType: "movie"
   },
   "girls-trip": {
     id: "girls-trip",
@@ -113,7 +121,9 @@ export const shows: Record<string, Show> = {
     creator: "Malcolm D. Lee",
     cast: ["Regina Hall", "Queen Latifah", "Jada Pinkett Smith", "Tiffany Haddish"],
     runtime: "122 min",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    tmdbId: 412019,
+    tmdbType: "movie"
   },
   "bridesmaids": {
     id: "bridesmaids",
@@ -126,7 +136,9 @@ export const shows: Record<string, Show> = {
     creator: "Paul Feig",
     cast: ["Kristen Wiig", "Maya Rudolph", "Rose Byrne", "Melissa McCarthy"],
     runtime: "125 min",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    tmdbId: 55721,
+    tmdbType: "movie"
   },
   "top-gun-maverick": {
     id: "top-gun-maverick",
@@ -139,7 +151,9 @@ export const shows: Record<string, Show> = {
     creator: "Joseph Kosinski",
     cast: ["Tom Cruise", "Miles Teller", "Jennifer Connelly", "Bashir Salahuddin"],
     runtime: "131 min",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    tmdbId: 361743,
+    tmdbType: "movie"
   },
   "single-parents": {
     id: "single-parents",
